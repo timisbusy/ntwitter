@@ -1,7 +1,8 @@
 {
   "name": "twitter",
-  "version": "v1.2.5",
+  "version": "v1.3.0",
   "description": "Twitter API client library for node.js",
+  "license": "MIT",
   "keywords": [
     "twitter",
     "streaming",
@@ -15,33 +16,16 @@
   },
   "scripts": {
     "test": "npm run lint && mocha",
-    "lint": "jshint test/*.js lib/*.js && echo Lint passed."
+    "lint": "./node_modules/.bin/eslint test/*.js lib/*.js"
   },
   "dependencies": {
-    "deep-extend": "^0.3.2",
-    "request": "^2.51.0"
+    "deep-extend": "^0.4.1",
+    "request": "^2.72.0"
   },
   "devDependencies": {
-    "jshint": "^2.6.0",
-    "mocha": "^2.1.0",
-    "nock": "^0.57.0"
+    "eslint": "^2.10.0",
+    "mocha": "^2.4.5",
+    "nock": "^8.0.0"
   },
-  "main": "./lib/twitter",
-  "jshintConfig": {
-    "boss": true,
-    "node": true,
-    "strict": true,
-    "newcap": false,
-    "undef": true,
-    "unused": true,
-    "onecase": true,
-    "lastsemic": true,
-    "indent": 2,
-    "globals": {
-      "escape": true,
-      "describe": true,
-      "it": true,
-      "before": true
-    }
-  }
+  "main": "./lib/twitter"
 }
